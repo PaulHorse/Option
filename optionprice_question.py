@@ -91,6 +91,9 @@ class EuropeanOptionOnFuture:
 
         self._discount_rate = discount_rate
 
+        if option_type not in ('c','p'):
+            raise ValueError("Option type must be 'c' or 'p'")
+
         self._option_type = option_type
 
     def get_price(self, futures_price: float, current_time: datetime) -> float:
@@ -118,7 +121,7 @@ class EuropeanOptionOnFuture:
             option_price = exp(-self._discount_rate * time_to_maturity) * (
                 futures_price * norm.cdf(d1) - self._strike_price * norm.cdf(d2)
             )
-        elif self.option_type == "p":
+        elif self._option_type == "p":
             option_price = exp(-self._discount_rate * time_to_maturity) * (
                 self._strike_price * norm.cdf(-d2) - futures_price * norm.cdf(-d1)
             )
