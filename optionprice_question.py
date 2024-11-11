@@ -15,9 +15,9 @@ TODO:
 
     (as given by equations [5] & [10]) in
 
-    https://url.uk.m.mimecastprotect.com/s/9KcdC355fVE1nUvurHQlDo6
+     https://www.glynholton.com/notes/black_1976/
 
-    Further info at https://url.uk.m.mimecastprotect.com/s/vWloC477cGvNXijC1H4lCnI
+    Further info at https://en.wikipedia.org/wiki/Black_model
 
     (NB - pay close attention to the sign of call and put deltas)
 
@@ -25,7 +25,7 @@ TODO:
 
     Feel free to use scipy.stats.norm (already imported) in order to calc CDF where appropriate.
 
-    https://url.uk.m.mimecastprotect.com/s/rj5QC555fODmBUlFxHkF1Ss
+    https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.norm.html
 
     
 
