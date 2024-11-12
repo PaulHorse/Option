@@ -231,6 +231,19 @@ if __name__ == "__main__":
 
     assert abs(delta - 0.59273) <= 0.0001
 
+    # Check price for put option - put call parity
+
+    opt_type = "p"  # Option type
+
+    opt = EuropeanOptionOnFuture(x, expiry, sig, r, opt_type)
+
+    price = opt.get_price(f, curr_time)
+
+    print(f"Test put price  = {price}")
+
+    assert abs(price - 19.544836) <= 0.0001
+
+
     # Call/put delta simple check
 
     assert EuropeanOptionOnFuture(x, expiry, sig, r, "c").get_delta(f, curr_time) > 0
